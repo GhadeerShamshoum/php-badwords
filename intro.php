@@ -8,6 +8,7 @@ $paragraph ="Nazareth è famosa universalmente come la città di origine di Ges�
 $paragraphLength = strlen($paragraph);
 $wordReplace = $_GET["word"];
 $paragraphNew = str_ireplace($wordReplace, "*****", $paragraph); 
+$paragraphNewLength = strlen($paragraphNew);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +20,9 @@ $paragraphNew = str_ireplace($wordReplace, "*****", $paragraph);
 </head>
 <body>
     <p><?php echo $paragraph?></p>
+    <p>Length:<?php echo $paragraphLength?></p>
     <p><?php echo $paragraphNew?></p>
-    <p><?php echo $paragraphLength?></p>
+    <p>Length:<?php echo $paragraphNewLength?></p>
     
 </body>
 </html>
